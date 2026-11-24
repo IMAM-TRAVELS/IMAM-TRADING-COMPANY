@@ -1,0 +1,1253 @@
+.plan-content {
+  max-width: 1440px;
+}
+
+.dashboard-action-link {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: #c4ced8;
+  font-size: 10px;
+  font-weight: 600;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+.dashboard-action-link:hover {
+  border-color: #3a5879;
+  background: #192330;
+}
+
+.plan-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.plan-highlights > div {
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.plan-highlights span,
+.offer-range > span,
+.offer-metrics span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.plan-highlights strong {
+  color: #e7edf4;
+  font:
+    700 14px/1.2 "Manrope",
+    sans-serif;
+}
+
+.plan-account-status {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  padding: 10px 13px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  color: #c3ced8;
+  font-size: 10px;
+}
+
+.plan-account-status::before {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #84919e;
+  content: "";
+}
+
+.plan-account-status.pending {
+  border-color: rgba(226, 177, 92, 0.2);
+  color: #dfbd7d;
+}
+
+.plan-account-status.pending::before {
+  background: #e2b15c;
+}
+
+.plan-account-status.active {
+  border-color: rgba(49, 196, 141, 0.24);
+  background: rgba(49, 196, 141, 0.06);
+  color: #8ad9b7;
+}
+
+.plan-account-status.active::before {
+  background: #31c48d;
+}
+
+.plan-account-status.error {
+  border-color: rgba(239, 100, 100, 0.24);
+  color: #f0a3a3;
+}
+
+.plan-account-status.error::before {
+  background: #ef6464;
+}
+
+.plan-account-status[hidden],
+.plan-status-badge[hidden] {
+  display: none !important;
+}
+
+.plan-group-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 24px 0 13px;
+}
+
+.plan-group-heading .eyebrow {
+  margin-bottom: 6px;
+  color: #8dbfff;
+}
+
+.plan-group-heading h2 {
+  margin: 0;
+  color: #e9eef3;
+  font:
+    700 17px/1.35 "Manrope",
+    sans-serif;
+}
+
+.plan-group-heading p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.plan-group-heading .plan-details-button {
+  flex: 0 0 auto;
+  margin-top: 0;
+}
+
+.plan-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  scroll-margin-top: 22px;
+}
+
+.offer-card {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  padding: 19px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(52, 124, 201, 0.1), transparent 50%),
+    var(--surface);
+}
+
+.offer-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.plan-status-badge {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  margin-left: auto;
+  padding: 0 8px;
+  border: 1px solid rgba(226, 177, 92, 0.22);
+  border-radius: 20px;
+  background: rgba(226, 177, 92, 0.08);
+  color: #dfbd7d;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.plan-status-badge.active {
+  border-color: rgba(49, 196, 141, 0.28);
+  background: rgba(49, 196, 141, 0.1);
+  color: #83d8b3;
+}
+
+.offer-heading .eyebrow {
+  margin-bottom: 6px;
+}
+
+.offer-heading h2,
+.plan-risk-note h2,
+.plan-bottom-cta h2 {
+  margin: 0;
+  color: #edf2f7;
+  font:
+    700 18px/1.3 "Manrope",
+    sans-serif;
+}
+
+.offer-fit {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.tier-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(99, 167, 240, 0.24);
+  border-radius: 9px;
+  background: rgba(67, 143, 240, 0.1);
+  color: #9bc9ff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.offer-range {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 18px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.offer-range strong {
+  color: #e7edf4;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.offer-range strong span {
+  padding: 0 4px;
+  color: #84919e;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.offer-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.offer-metrics > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  background: rgba(7, 11, 16, 0.3);
+}
+
+.offer-metrics strong {
+  color: #eaf1f8;
+  font:
+    700 15px/1 "Manrope",
+    sans-serif;
+}
+
+.tier-cta {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding: 0 12px;
+  border: 1px solid rgba(67, 143, 240, 0.25);
+  border-radius: 6px;
+  background: rgba(67, 143, 240, 0.08);
+  color: #a4ceff;
+  font-size: 10px;
+  font-weight: 600;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+.tier-cta:hover {
+  border-color: rgba(67, 143, 240, 0.5);
+  background: rgba(67, 143, 240, 0.15);
+}
+
+.account-maintain-section {
+  margin-top: 14px;
+  scroll-margin-top: 22px;
+}
+
+.account-maintain-card {
+  display: flex;
+  max-width: 760px;
+  min-height: 220px;
+  flex-direction: column;
+  padding: 19px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(52, 124, 201, 0.12), transparent 50%),
+    var(--surface);
+}
+
+.account-maintain-card .offer-heading h2 {
+  font-size: 16px;
+}
+
+.account-maintain-terms {
+  margin: 12px 0 16px;
+  color: #a7b2bd;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.plan-risk-note {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  border-color: rgba(226, 177, 92, 0.2);
+  background:
+    linear-gradient(100deg, rgba(93, 65, 24, 0.16), transparent 62%),
+    var(--surface);
+}
+
+.risk-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(226, 177, 92, 0.25);
+  border-radius: 50%;
+  background: rgba(226, 177, 92, 0.08);
+  color: #e2bd78;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.plan-risk-note .eyebrow {
+  margin-bottom: 6px;
+  color: #c3a366;
+}
+
+.plan-risk-note h2 {
+  font-size: 13px;
+}
+
+.plan-risk-note p:not(.eyebrow) {
+  margin: 7px 0 0;
+  color: #a9a397;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.risk-link {
+  padding: 8px 10px;
+  border: 1px solid rgba(226, 177, 92, 0.2);
+  border-radius: 6px;
+  color: #e3c484;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.risk-link:hover {
+  background: rgba(226, 177, 92, 0.08);
+}
+
+.plan-bottom-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(52, 124, 201, 0.12), transparent 50%),
+    var(--surface);
+}
+
+.plan-bottom-cta .eyebrow {
+  margin-bottom: 6px;
+}
+
+.plan-bottom-cta h2 {
+  font-size: 14px;
+}
+
+.plan-bottom-cta p:not(.eyebrow) {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.plan-bottom-cta .plan-details-button {
+  flex: 0 0 auto;
+  margin-top: 0;
+}
+
+.plan-content .dashboard-footer {
+  padding-top: 17px;
+}
+
+.plan-content .dashboard-footer a {
+  color: #8dbfff;
+}
+
+.plan-content .dashboard-footer a:hover {
+  color: #c5e0ff;
+}
+
+@media (max-width: 850px) {
+  .plan-offer-grid {
+    gap: 11px;
+  }
+
+  .offer-card {
+    padding: 16px;
+  }
+
+  .offer-metrics > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .plan-group-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 21px;
+  }
+
+  .plan-highlights {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .plan-highlights > div {
+    min-height: 58px;
+    padding: 10px 13px;
+  }
+
+  .plan-offer-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .offer-card {
+    min-height: 0;
+  }
+
+  .plan-risk-note {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .risk-link {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .plan-bottom-cta {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .plan-page .breadcrumbs {
+    font-size: 8px;
+  }
+
+  .offer-metrics > div {
+    padding: 9px;
+  }
+}
+
+.investor-term-picker {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.investor-term-picker > .eyebrow {
+  margin: 0;
+  color: #8494a8;
+  font-size: 8px;
+  letter-spacing: 1.1px;
+}
+
+.investor-term-switch {
+  display: inline-flex;
+  gap: 3px;
+  padding: 4px;
+  border: 1px solid rgba(133, 160, 191, 0.18);
+  border-radius: 999px;
+  background: #0c141e;
+}
+
+.investor-term-switch button {
+  min-width: 76px;
+  min-height: 32px;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #9ba9b9;
+  cursor: pointer;
+  font: 600 10px/1 "DM Sans", sans-serif;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.investor-term-switch button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #6d64ff, #4a8cff);
+  box-shadow: 0 4px 14px rgba(80, 119, 255, 0.28);
+  color: #fff;
+}
+
+.investor-term-switch button:focus-visible {
+  outline: 2px solid #a9cfff;
+  outline-offset: 3px;
+}
+
+.plan-offer-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.offer-card {
+  position: relative;
+  min-height: 354px;
+  overflow: hidden;
+  padding: 19px;
+  border-color: rgba(125, 151, 185, 0.2);
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(102, 102, 255, 0.14), transparent 49%),
+    linear-gradient(150deg, #172336, #111a27 60%, #101823);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(117, 153, 255, 0.52);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
+}
+
+.offer-heading {
+  min-height: 71px;
+}
+
+.offer-card .plan-status-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  margin: 0;
+}
+
+.offer-heading h2 {
+  font-size: 19px;
+}
+
+.offer-heading .eyebrow {
+  color: #9ba9ff;
+  font-size: 8px;
+  letter-spacing: 1.25px;
+}
+
+.offer-fit {
+  max-width: 170px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.tier-mark {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: rgba(116, 113, 255, 0.12);
+  color: #b7b2ff;
+  font-size: 9px;
+}
+
+.offer-share {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 12px 0 5px;
+}
+
+.offer-share strong {
+  color: #f3f5ff;
+  font:
+    800 34px/1 "Manrope",
+    sans-serif;
+  letter-spacing: -1.5px;
+}
+
+.offer-share span {
+  color: #9aa8bb;
+  font-size: 9px;
+}
+
+.offer-range {
+  gap: 6px;
+  margin-top: 12px;
+  padding: 12px 0;
+  border-top-color: rgba(177, 191, 210, 0.1);
+  border-bottom-color: rgba(177, 191, 210, 0.1);
+}
+
+.offer-range > span,
+.offer-metrics span {
+  font-size: 8px;
+}
+
+.offer-range strong {
+  color: #e7edf7;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.offer-metrics {
+  grid-template-columns: 1fr;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.offer-metrics > div {
+  min-height: 33px;
+  align-items: center;
+  flex-direction: row;
+  padding: 7px 9px;
+  border-color: rgba(177, 191, 210, 0.09);
+  border-radius: 7px;
+  background: rgba(7, 11, 16, 0.24);
+}
+
+.offer-metrics strong {
+  font-size: 10px;
+}
+
+.offer-card .tier-cta {
+  min-height: 39px;
+  margin-top: auto;
+  border-color: rgba(113, 123, 255, 0.3);
+  border-radius: 7px;
+  background: linear-gradient(105deg, rgba(98, 91, 255, 0.95), rgba(75, 135, 255, 0.95));
+  color: #fff;
+  font-size: 10px;
+}
+
+.offer-card .tier-cta:hover {
+  border-color: rgba(175, 191, 255, 0.8);
+  background: linear-gradient(105deg, #746dff, #5b9aff);
+}
+
+.account-maintain-card {
+  max-width: none;
+  min-height: 226px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+  align-items: center;
+  gap: 12px 36px;
+  padding: 26px;
+  border-color: rgba(117, 153, 255, 0.25);
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 90% 0, rgba(99, 111, 255, 0.18), transparent 48%),
+    linear-gradient(140deg, #172438, #101923 75%);
+}
+
+.account-maintain-card .offer-heading {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.account-maintain-card .offer-heading h2 {
+  font-size: 22px;
+}
+
+.account-maintain-card .offer-range {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding: 0 0 0 22px;
+  border: 0;
+  border-left: 1px solid rgba(177, 191, 210, 0.12);
+}
+
+.account-maintain-card .offer-range strong {
+  font:
+    700 20px/1.35 "Manrope",
+    sans-serif;
+}
+
+.account-maintain-terms {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 590px;
+  margin: 0;
+  font-size: 10px;
+}
+
+.account-maintain-card .tier-cta {
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 42px;
+  margin: 0 0 0 22px;
+  border-color: rgba(113, 123, 255, 0.3);
+  border-radius: 7px;
+  background: linear-gradient(105deg, rgba(98, 91, 255, 0.95), rgba(75, 135, 255, 0.95));
+  color: #fff;
+}
+
+.account-maintain-card .tier-cta:hover {
+  background: linear-gradient(105deg, #746dff, #5b9aff);
+}
+
+@media (max-width: 1050px) {
+  .plan-offer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .plan-group-heading {
+    gap: 14px;
+  }
+
+  .investor-term-picker {
+    align-items: flex-start;
+  }
+
+  .plan-offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    min-height: 330px;
+  }
+
+  .account-maintain-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .account-maintain-card .offer-heading,
+  .account-maintain-card .offer-range,
+  .account-maintain-terms,
+  .account-maintain-card .tier-cta {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .account-maintain-card .offer-range {
+    padding: 12px 0;
+    border-top: 1px solid rgba(177, 191, 210, 0.1);
+    border-bottom: 1px solid rgba(177, 191, 210, 0.1);
+  }
+
+  .account-maintain-card .tier-cta {
+    margin: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-card,
+  .investor-term-switch button {
+    transition: none;
+  }
+
+  .offer-card:hover {
+    transform: none;
+  }
+}
+
+.service-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+  scroll-margin-top: 22px;
+}
+
+.service-plan-grid > article {
+  position: relative;
+  min-width: 0;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(125, 151, 185, 0.2);
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(102, 102, 255, 0.14), transparent 49%),
+    linear-gradient(150deg, #172336, #111a27 60%, #101823);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+.investor-service-card .offer-heading {
+  min-height: 65px;
+}
+
+.investor-service-card .offer-heading .eyebrow {
+  color: #a7a3ff;
+}
+
+.investor-service-card .offer-heading h2,
+.account-maintain-card .offer-heading h2 {
+  font-size: 21px;
+}
+
+.investor-service-card .plan-status-badge,
+.account-maintain-card .plan-status-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  margin: 0;
+}
+
+.investor-selection-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.investor-selection-details > div {
+  min-width: 0;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 9px 11px;
+  border: 1px solid rgba(177, 191, 210, 0.1);
+  border-radius: 7px;
+  background: rgba(7, 11, 16, 0.24);
+}
+
+.investor-selection-details span {
+  color: #9aa8bb;
+  font-size: 8px;
+}
+
+.investor-selection-details strong {
+  overflow-wrap: anywhere;
+  color: #edf2f7;
+  font:
+    700 11px/1.35 "Manrope",
+    sans-serif;
+}
+
+.service-plan-note {
+  margin: 13px 0;
+  color: #9aa8bb;
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.investor-service-card .tier-cta,
+.account-maintain-card .tier-cta {
+  min-height: 40px;
+  margin-top: auto;
+  border-color: rgba(113, 123, 255, 0.3);
+  border-radius: 7px;
+  background: linear-gradient(105deg, #625bff, #4b87ff);
+  color: #fff;
+}
+
+.investor-service-card .tier-cta:hover,
+.account-maintain-card .tier-cta:hover {
+  border-color: rgba(175, 191, 255, 0.8);
+  background: linear-gradient(105deg, #746dff, #5b9aff);
+}
+
+.account-maintain-card {
+  max-width: none;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  background:
+    radial-gradient(ellipse at 90% 0, rgba(99, 111, 255, 0.17), transparent 48%),
+    linear-gradient(140deg, #172438, #101923 75%);
+}
+
+.account-maintain-card .offer-heading {
+  min-height: 65px;
+}
+
+.account-maintain-card .offer-heading .eyebrow {
+  color: #a7a3ff;
+}
+
+.account-maintain-card .offer-range {
+  margin-top: 18px;
+  padding: 14px 0;
+  border-top-color: rgba(177, 191, 210, 0.1);
+  border-bottom-color: rgba(177, 191, 210, 0.1);
+}
+
+.account-maintain-card .offer-range > span {
+  color: #9aa8bb;
+  font-size: 8px;
+}
+
+.account-maintain-card .offer-range strong {
+  font:
+    700 19px/1.4 "Manrope",
+    sans-serif;
+}
+
+.account-maintain-card .account-maintain-terms {
+  max-width: 540px;
+  margin: 13px 0;
+}
+
+.service-plan-grid > article:hover {
+  transform: translateY(-3px);
+  border-color: rgba(117, 153, 255, 0.45);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 700px) {
+  .service-plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-plan-grid > article {
+    min-height: 0;
+    padding: 19px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-plan-grid > article {
+    transition: none;
+  }
+
+  .service-plan-grid > article:hover {
+    transform: none;
+  }
+}
+
+.service-choice-switch {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin: 0 auto 18px;
+  padding: 4px;
+  border: 1px solid rgba(133, 160, 191, 0.18);
+  border-radius: 999px;
+  background: #0c141e;
+}
+
+.service-choice-switch button {
+  min-width: 132px;
+  min-height: 34px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #9ba9b9;
+  cursor: pointer;
+  font: 600 10px/1 "DM Sans", sans-serif;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.service-choice-switch button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #6d64ff, #4a8cff);
+  box-shadow: 0 4px 14px rgba(80, 119, 255, 0.28);
+  color: #fff;
+}
+
+.service-choice-switch button:focus-visible {
+  outline: 2px solid #a9cfff;
+  outline-offset: 3px;
+}
+
+.service-plan-panels {
+  scroll-margin-top: 22px;
+}
+
+.service-plan-panel[hidden] {
+  display: none !important;
+}
+
+.investor-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.investor-period-switch {
+  width: fit-content;
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: flex;
+  gap: 3px;
+  margin: 0 auto 2px;
+  padding: 4px;
+  border: 1px solid rgba(133, 160, 191, 0.18);
+  border-radius: 999px;
+  background: #0c141e;
+}
+
+.investor-period-switch button {
+  min-width: 86px;
+  min-height: 32px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #9ba9b9;
+  cursor: pointer;
+  font: 600 10px/1 "DM Sans", sans-serif;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.investor-period-switch button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #6d64ff, #4a8cff);
+  box-shadow: 0 4px 14px rgba(80, 119, 255, 0.28);
+  color: #fff;
+}
+
+.investor-period-switch button:focus-visible {
+  outline: 2px solid #a9cfff;
+  outline-offset: 3px;
+}
+
+.investor-tier-card,
+.account-maintain-card.service-plan-card {
+  position: relative;
+  min-width: 0;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid rgba(125, 151, 185, 0.2);
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(102, 102, 255, 0.14), transparent 49%),
+    linear-gradient(150deg, #172336, #111a27 60%, #101823);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.investor-tier-card:hover,
+.account-maintain-card.service-plan-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(117, 153, 255, 0.45);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+.investor-tier-card .offer-heading,
+.account-maintain-card.service-plan-card .offer-heading {
+  min-height: 65px;
+}
+
+.investor-tier-card .offer-heading .eyebrow,
+.account-maintain-card.service-plan-card .offer-heading .eyebrow {
+  color: #a7a3ff;
+}
+
+.investor-tier-card .offer-heading h2,
+.account-maintain-card.service-plan-card .offer-heading h2 {
+  font-size: 21px;
+}
+
+.investor-tier-card .plan-status-badge,
+.account-maintain-card.service-plan-card .plan-status-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  margin: 0;
+}
+
+.investor-tier-card.featured-tier {
+  border-color: rgba(130, 123, 255, 0.58);
+  box-shadow:
+    0 0 0 1px rgba(130, 123, 255, 0.14),
+    0 16px 38px rgba(67, 75, 170, 0.18);
+}
+
+.investor-tier-card .investor-selection-details {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.investor-tier-card .investor-selection-details > div {
+  min-width: 0;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 9px 11px;
+  border: 1px solid rgba(177, 191, 210, 0.1);
+  border-radius: 7px;
+  background: rgba(7, 11, 16, 0.24);
+}
+
+.investor-tier-card .investor-selection-details span {
+  color: #9aa8bb;
+  font-size: 8px;
+}
+
+.investor-tier-card .investor-selection-details strong {
+  overflow-wrap: anywhere;
+  color: #edf2f7;
+  font:
+    700 11px/1.35 "Manrope",
+    sans-serif;
+}
+
+.investor-tier-card .service-plan-note {
+  margin: 12px 0 14px;
+  color: #9aa8bb;
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.investor-tier-card .tier-cta,
+.account-maintain-card.service-plan-card .tier-cta {
+  min-height: 40px;
+  margin-top: auto;
+  border-color: rgba(113, 123, 255, 0.3);
+  border-radius: 7px;
+  background: linear-gradient(105deg, #625bff, #4b87ff);
+  color: #fff;
+}
+
+.investor-tier-card .tier-cta:hover,
+.account-maintain-card.service-plan-card .tier-cta:hover {
+  border-color: rgba(175, 191, 255, 0.8);
+  background: linear-gradient(105deg, #746dff, #5b9aff);
+}
+
+.account-maintain-card.service-plan-card {
+  max-width: none;
+}
+
+.account-maintain-card.service-plan-card .offer-range {
+  margin-top: 18px;
+  padding: 14px 0;
+  border-top-color: rgba(177, 191, 210, 0.1);
+  border-bottom-color: rgba(177, 191, 210, 0.1);
+}
+
+.account-maintain-card.service-plan-card .offer-range > span {
+  color: #9aa8bb;
+  font-size: 8px;
+}
+
+.account-maintain-card.service-plan-card .offer-range strong {
+  font:
+    700 20px/1.4 "Manrope",
+    sans-serif;
+}
+
+.account-maintain-card.service-plan-card .account-maintain-terms {
+  max-width: 650px;
+  margin: 13px 0;
+}
+
+@media (max-width: 800px) {
+  .investor-tier-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .service-choice-switch {
+    width: 100%;
+  }
+
+  .service-choice-switch button {
+    min-width: 0;
+    flex: 1 1 0;
+    padding: 0 10px;
+    font-size: 9px;
+  }
+
+  .investor-tier-card,
+  .account-maintain-card.service-plan-card {
+    min-height: 0;
+    padding: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-choice-switch button,
+  .investor-tier-card,
+  .account-maintain-card.service-plan-card {
+    transition: none;
+  }
+
+  .investor-tier-card:hover,
+  .account-maintain-card.service-plan-card:hover {
+    transform: none;
+  }
+}

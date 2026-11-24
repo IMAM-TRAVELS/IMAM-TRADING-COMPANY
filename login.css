@@ -1,0 +1,327 @@
+:root {
+  --bg: #070d17;
+  --panel: #0d1726;
+  --line: rgba(160, 184, 213, 0.16);
+  --text: #f4f7fb;
+  --muted: #8798ad;
+  --blue: #3288e8;
+  --green: #51c29b;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      rgba(42, 112, 180, 0.12),
+      transparent 40%
+    ),
+    var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.login-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 46px 20px 28px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 34px;
+}
+.brand img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+.brand span {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+.brand b {
+  color: #75b9fa;
+}
+.login-card {
+  width: min(100%, 420px);
+  padding: 36px 36px 30px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(
+    145deg,
+    rgba(16, 30, 49, 0.97),
+    rgba(10, 19, 33, 0.98)
+  );
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+}
+.card-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.card-heading p {
+  margin: 0 0 11px;
+  color: #67aff3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+.card-heading h1 {
+  margin: 0;
+  font:
+    800 24px/1.3 "Manrope",
+    sans-serif;
+  letter-spacing: -0.6px;
+}
+.card-heading > span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+form > label {
+  display: block;
+  margin: 17px 0 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #dce5ef;
+}
+form > input,
+.password-field input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid rgba(155, 180, 210, 0.24);
+  border-radius: 6px;
+  outline: none;
+  background: #080f1a;
+  padding: 0 13px;
+  color: #fff;
+  font:
+    500 13px "DM Sans",
+    sans-serif;
+}
+form > input::placeholder,
+.password-field input::placeholder {
+  color: #5f7085;
+}
+form > input:focus,
+.password-field input:focus {
+  border-color: #3c91ed;
+  box-shadow: 0 0 0 3px rgba(50, 136, 232, 0.13);
+}
+.password-field {
+  position: relative;
+}
+.password-field input {
+  padding-right: 48px;
+}
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  transform: translateY(-50%);
+  place-items: center;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #8798ad;
+  cursor: pointer;
+}
+.password-toggle:hover {
+  color: #f4f7fb;
+}
+.password-toggle:focus-visible {
+  outline: 2px solid #3c91ed;
+}
+.password-toggle svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+.password-toggle svg[hidden] {
+  display: none;
+}
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 22px;
+}
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b1bfce;
+  font-size: 10px;
+  cursor: pointer;
+}
+.remember input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--blue);
+}
+.form-options > a {
+  color: #78b8f5;
+  font-size: 10px;
+  font-weight: 700;
+}
+.submit-button {
+  width: 100%;
+  height: 46px;
+  border: 0;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #348eea, #226bd0);
+  color: #fff;
+  font:
+    700 12px "DM Sans",
+    sans-serif;
+  cursor: pointer;
+}
+.submit-button span {
+  margin-left: 8px;
+}
+.submit-button:hover {
+  filter: brightness(1.08);
+}
+.form-message {
+  min-height: 0;
+  margin: 0;
+  color: #ffc878;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.form-message:not(:empty) {
+  margin-top: 12px;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 23px 0 17px;
+  color: #718197;
+  font-size: 10px;
+}
+.divider:before,
+.divider:after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+.google-button {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #111d2d;
+  color: #d1dce8;
+  font:
+    600 11px "DM Sans",
+    sans-serif;
+}
+.google-button:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+.google-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #fff;
+  color: #4285f4;
+  font:
+    800 12px Arial,
+    sans-serif;
+}
+.provider-note {
+  margin: 8px 0 0;
+  color: #667991;
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.45;
+}
+.signup {
+  margin: 25px 0 0;
+  color: #aab8c8;
+  text-align: center;
+  font-size: 11px;
+}
+.signup a {
+  color: #78b8f5;
+  font-weight: 700;
+}
+.security-note {
+  margin: 20px 0 0;
+  color: #74869b;
+  font-size: 10px;
+}
+.security-note span {
+  color: var(--green);
+  margin-right: 5px;
+}
+.back-home {
+  margin-top: auto;
+  padding-top: 30px;
+  color: #708198;
+  font-size: 10px;
+}
+.back-home:hover {
+  color: #dce7f3;
+}
+@media (max-width: 480px) {
+  .login-layout {
+    padding: 30px 16px 22px;
+  }
+  .brand {
+    margin-bottom: 25px;
+  }
+  .login-card {
+    padding: 29px 22px 24px;
+  }
+  .card-heading h1 {
+    font-size: 22px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .login-card {
+    animation: appear 0.45s ease both;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

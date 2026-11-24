@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View your Imam Trading Company client dashboard and selected plan."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Trader desk | Imam Trading Company</title>
+    <link rel="icon" type="image/png" href="imam-trading-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css?v=4" />
+  </head>
+  <body>
+    <div
+      id="session-state"
+      class="session-state"
+      role="status"
+      aria-live="polite"
+    >
+      <span class="session-spinner" aria-hidden="true"></span>
+      <p id="session-message">Checking your secure sign-in...</p>
+      <button
+        id="session-signout"
+        class="secondary-button"
+        type="button"
+        hidden
+      >
+        Sign out
+      </button>
+    </div>
+
+    <div id="dashboard" class="dashboard-shell" hidden>
+      <aside class="dashboard-sidebar">
+        <a
+          class="dashboard-brand"
+          href="index.html"
+          aria-label="Imam Trading Company home"
+        >
+          <img src="imam-trading-logo.png" alt="" />
+          <span>IMAM TRADING<br /><b>COMPANY</b></span>
+        </a>
+
+        <p class="sidebar-label">CLIENT SPACE</p>
+        <nav class="sidebar-nav" aria-label="Client dashboard">
+          <a class="nav-link active" href="#overview" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="1" />
+              <rect x="13.5" y="3.5" width="7" height="7" rx="1" />
+              <rect x="3.5" y="13.5" width="7" height="7" rx="1" />
+              <rect x="13.5" y="13.5" width="7" height="7" rx="1" />
+            </svg>
+            Overview
+          </a>
+          <a class="nav-link" href="plan.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m12 3 8.5 5v8L12 21l-8.5-5V8L12 3Z" />
+              <path d="m3.8 8.2 8.2 4.7 8.2-4.7M12 13v8" />
+            </svg>
+            My plan
+          </a>
+          <a class="nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5 20c.7-3.1 3.2-5 7-5s6.3 1.9 7 5" />
+            </svg>
+            Profile
+          </a>
+          <a
+            class="nav-link"
+            href="https://wa.me/923331233009?text=Hello%2C%20I%20need%20help%20with%20my%20ITC%20account."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"
+              />
+              <path d="M9 9.2c.5 2 2 3.5 4 4" />
+            </svg>
+            Support
+            <span class="nav-external" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <span class="sidebar-status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>Private client area</strong>
+            <small>Protected account details</small>
+          </div>
+        </div>
+      </aside>
+
+      <div class="dashboard-main">
+        <header class="dashboard-topbar">
+          <div class="breadcrumbs">
+            <span>IMAM TRADING</span>
+            <span aria-hidden="true">/</span>
+            <strong>Trader desk</strong>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-chip">
+              <span id="topbar-initials" class="avatar-small" aria-hidden="true"
+                >IT</span
+              >
+              <span id="topbar-name">Client account</span>
+            </div>
+            <button id="signout-button" class="signout-button" type="button">
+              Sign out
+            </button>
+          </div>
+        </header>
+
+        <main class="dashboard-content" id="overview">
+          <section class="welcome-row">
+            <div>
+              <p class="eyebrow">CLIENT DASHBOARD</p>
+              <h1>Welcome back, <span id="welcome-name">Client</span></h1>
+              <p class="welcome-copy">
+                Review your profile, selected plan, and account setup.
+              </p>
+            </div>
+            <a
+              class="support-button"
+              href="https://wa.me/923331233009?text=Hello%2C%20I%20need%20help%20with%20my%20ITC%20account."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact ITC <span aria-hidden="true">↗</span>
+            </a>
+          </section>
+
+          <section class="summary-grid" aria-label="Account overview">
+            <article id="profile" class="dashboard-card profile-card">
+              <div class="card-heading">
+                <div>
+                  <p class="eyebrow">PROFILE</p>
+                  <h2>Client details</h2>
+                </div>
+                <span class="status-pill">
+                  <span aria-hidden="true"></span>
+                  Setup pending
+                </span>
+              </div>
+
+              <div class="profile-identity">
+                <div
+                  id="profile-initials"
+                  class="avatar-large"
+                  aria-hidden="true"
+                >
+                  IT
+                </div>
+                <div class="identity-copy">
+                  <h3 id="profile-name">Client account</h3>
+                  <p id="profile-email"></p>
+                </div>
+              </div>
+
+              <dl class="profile-details">
+                <div>
+                  <dt>WhatsApp number</dt>
+                  <dd id="profile-phone"></dd>
+                </div>
+                <div>
+                  <dt>Member since</dt>
+                  <dd id="member-since">—</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article id="plan" class="dashboard-card plan-card">
+              <div class="card-heading">
+                <div>
+                  <p class="eyebrow">YOUR SELECTED PLAN</p>
+                  <h2 id="plan-title">Selected plan</h2>
+                </div>
+                <span class="plan-mark" aria-hidden="true">ITC</span>
+              </div>
+              <p id="plan-range" class="plan-range">—</p>
+              <p id="plan-period" class="plan-period" hidden></p>
+
+              <div class="plan-metrics">
+                <div id="profit-share-metric">
+                  <span>Published profit share</span>
+                  <strong id="profit-share">—</strong>
+                </div>
+                <div id="loss-share-metric">
+                  <span>Loss share shown</span>
+                  <strong>100%</strong>
+                </div>
+                <div id="account-amount-metric" hidden>
+                  <span>Requested account amount</span>
+                  <strong id="account-amount">—</strong>
+                </div>
+                <div id="management-terms-metric" hidden>
+                  <span>Management terms</span>
+                  <strong>Confirm with ITC</strong>
+                </div>
+              </div>
+
+              <p class="plan-disclaimer">
+                Confirm all terms, fees, and risks with ITC before making a
+                payment.
+              </p>
+              <a class="plan-details-button" href="plan.html">
+                Compare all plans <span aria-hidden="true">→</span>
+              </a>
+            </article>
+          </section>
+
+          <section class="details-grid">
+            <article id="activity" class="dashboard-card setup-card">
+              <div class="card-heading">
+                <div>
+                  <p class="eyebrow">ACCOUNT SETUP</p>
+                  <h2>Next steps</h2>
+                </div>
+                <span class="muted-badge">Not yet active</span>
+              </div>
+
+              <ol class="setup-list">
+                <li class="setup-step complete">
+                  <span class="step-marker" aria-hidden="true">✓</span>
+                  <div>
+                    <strong>Client profile created</strong>
+                    <small>Your contact details and plan are saved.</small>
+                  </div>
+                </li>
+                <li class="setup-step current">
+                  <span class="step-marker" aria-hidden="true">2</span>
+                  <div>
+                    <strong>Confirm your plan terms</strong>
+                    <small
+                      >Discuss fees, account setup, and risks with ITC.</small
+                    >
+                  </div>
+                  <a
+                    href="https://wa.me/923331233009?text=Hello%2C%20I%20would%20like%20to%20confirm%20my%20selected%20plan."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Discuss
+                  </a>
+                </li>
+                <li class="setup-step">
+                  <span class="step-marker" aria-hidden="true">3</span>
+                  <div>
+                    <strong>Account activation</strong>
+                    <small>A trading account is not linked yet.</small>
+                  </div>
+                </li>
+              </ol>
+            </article>
+
+            <article class="dashboard-card privacy-card">
+              <p class="eyebrow">ACCOUNT PRIVACY</p>
+              <h2>Your details stay private</h2>
+              <p>
+                Your profile is shown only while you are signed in. Database
+                rules restrict profile access to its account owner.
+              </p>
+              <div class="privacy-indicator">
+                <span class="privacy-icon" aria-hidden="true">✓</span>
+                <span>Authenticated session</span>
+                <strong>Active</strong>
+              </div>
+              <div class="privacy-indicator">
+                <span class="privacy-icon plan-icon" aria-hidden="true">◇</span>
+                <span>Selected plan</span>
+                <strong id="profile-plan">—</strong>
+              </div>
+            </article>
+          </section>
+
+          <section
+            class="dashboard-card trading-empty"
+            aria-labelledby="trading-title"
+          >
+            <div class="empty-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M8 36h32M12 30V19m8 11V12m8 18V23m8 7V16" />
+                <path d="m10 15 9-7 9 10 10-8" />
+              </svg>
+            </div>
+            <div>
+              <p class="eyebrow">TRADING ACTIVITY</p>
+              <h2 id="trading-title">No trading account linked</h2>
+              <p>
+                Trading statistics will appear here after ITC connects an
+                account. No performance figures are shown until real account
+                data is available.
+              </p>
+            </div>
+            <span class="empty-state-label">Awaiting account setup</span>
+          </section>
+
+          <footer class="dashboard-footer">
+            <span>Imam Trading Company · Client area</span>
+            <span>Review all plan and risk terms with ITC before payment.</span>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="home.js?v=3"></script>
+  </body>
+</html>

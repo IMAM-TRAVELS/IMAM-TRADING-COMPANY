@@ -1,0 +1,47 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid && !data.exists()",
+        ".validate": "newData.hasChildren(['fullName', 'email', 'whatsappNumber', 'serviceType', 'plan', 'createdAt']) && newData.child('email').val() === auth.token.email && ((newData.child('serviceType').val() === 'Investors' && (newData.child('plan').val() === 'Gold' || newData.child('plan').val() === 'Platinum') && (newData.child('planPeriod').val() === 'Monthly' || newData.child('planPeriod').val() === 'Yearly') && !newData.child('accountAmount').exists()) || (newData.child('serviceType').val() === 'Account Maintain' && newData.child('plan').val() === 'Account Maintain' && newData.child('accountAmount').isNumber() && newData.child('accountAmount').val() >= 1000 && newData.child('accountAmount').val() <= 1000000 && !newData.child('planPeriod').exists()))",
+        "fullName": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 120"
+        },
+        "email": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 254"
+        },
+        "whatsappNumber": {
+          ".validate": "newData.isString() && newData.val().length >= 7 && newData.val().length <= 24"
+        },
+        "serviceType": {
+          ".validate": "newData.val() === 'Investors' || newData.val() === 'Account Maintain'"
+        },
+        "plan": {
+          ".validate": "newData.val() === 'Gold' || newData.val() === 'Platinum' || newData.val() === 'Account Maintain'"
+        },
+        "planPeriod": {
+          ".validate": "newData.val() === 'Monthly' || newData.val() === 'Yearly'"
+        },
+        "accountAmount": {
+          ".validate": "newData.isNumber() && newData.val() >= 1000 && newData.val() <= 1000000"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber()"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    },
+    "activePlans": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": false,
+        ".validate": "newData.val() === 'Silver' || newData.val() === 'Gold' || newData.val() === 'Platinum' || newData.val() === 'Diamond' || newData.val() === 'Account Maintain'"
+      }
+    }
+  }
+}

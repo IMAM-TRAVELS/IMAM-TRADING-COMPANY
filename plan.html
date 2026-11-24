@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Compare Imam Trading Company plan ranges and listed profit and loss shares."
+    />
+    <title>Client plans | Imam Trading Company</title>
+    <link rel="icon" type="image/png" href="imam-trading-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css?v=4" />
+    <link rel="stylesheet" href="plan.css?v=6" />
+  </head>
+  <body class="plan-page">
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar">
+        <a
+          class="dashboard-brand"
+          href="index.html"
+          aria-label="Imam Trading Company home"
+        >
+          <img src="imam-trading-logo.png" alt="" />
+          <span>IMAM TRADING<br /><b>COMPANY</b></span>
+        </a>
+
+        <p class="sidebar-label">CLIENT SPACE</p>
+        <nav class="sidebar-nav" aria-label="Client pages">
+          <a class="nav-link" href="home.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="1" />
+              <rect x="13.5" y="3.5" width="7" height="7" rx="1" />
+              <rect x="3.5" y="13.5" width="7" height="7" rx="1" />
+              <rect x="13.5" y="13.5" width="7" height="7" rx="1" />
+            </svg>
+            Overview
+          </a>
+          <a class="nav-link active" href="#plans" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m12 3 8.5 5v8L12 21l-8.5-5V8L12 3Z" />
+              <path d="m3.8 8.2 8.2 4.7 8.2-4.7M12 13v8" />
+            </svg>
+            Plans
+          </a>
+          <a class="nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5 20c.7-3.1 3.2-5 7-5s6.3 1.9 7 5" />
+            </svg>
+            Profile
+          </a>
+          <a
+            class="nav-link"
+            href="https://wa.me/923331233009?text=Hello%2C%20I%20would%20like%20help%20understanding%20the%20ITC%20plans."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"
+              />
+              <path d="M9 9.2c.5 2 2 3.5 4 4" />
+            </svg>
+            Support
+            <span class="nav-external" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <span class="sidebar-status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>Plan information</strong>
+            <small>Confirm terms with ITC</small>
+          </div>
+        </div>
+      </aside>
+
+      <div class="dashboard-main">
+        <header class="dashboard-topbar">
+          <div class="breadcrumbs">
+            <span>IMAM TRADING</span>
+            <span aria-hidden="true">/</span>
+            <strong>Client plans</strong>
+          </div>
+          <div class="topbar-actions">
+            <a class="dashboard-action-link" href="home.html">
+              <span aria-hidden="true">←</span> Dashboard
+            </a>
+          </div>
+        </header>
+
+        <main class="dashboard-content plan-content">
+          <section class="welcome-row">
+            <div>
+              <p class="eyebrow">PLAN OVERVIEW</p>
+              <h1>Find the right plan for you</h1>
+              <p class="welcome-copy">
+                Choose an Investor plan with a monthly or yearly term, or
+                request Account Maintain service.
+              </p>
+            </div>
+            <a
+              class="support-button"
+              href="https://wa.me/923331233009?text=Hello%2C%20I%27d%20like%20help%20comparing%20the%20ITC%20plans."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Talk to ITC <span aria-hidden="true">↗</span>
+            </a>
+          </section>
+
+          <section class="plan-highlights" aria-label="Plan summary">
+            <div>
+              <span>Service types</span>
+              <strong>2 options</strong>
+            </div>
+            <div>
+              <span>Investor terms</span>
+              <strong>Monthly or Yearly</strong>
+            </div>
+            <div>
+              <span>Account Maintain range</span>
+              <strong>PKR 1,000 – 1,000,000</strong>
+            </div>
+          </section>
+
+          <div
+            id="plan-account-status"
+            class="plan-account-status"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></div>
+
+          <section id="plans" class="service-selection">
+            <div
+              class="service-choice-switch"
+              role="group"
+              aria-label="Choose a service"
+            >
+              <button
+                type="button"
+                data-service-choice="investors"
+                aria-pressed="true"
+              >
+                Investors
+              </button>
+              <button
+                type="button"
+                data-service-choice="account-maintain"
+                aria-pressed="false"
+              >
+                Account Maintain
+              </button>
+            </div>
+            <div class="service-plan-panels">
+              <div
+                class="service-plan-panel investor-tier-grid"
+                data-service-panel="investors"
+                aria-label="Investor Gold and Platinum plans"
+              >
+                <div
+                  class="investor-period-switch"
+                  role="group"
+                  aria-label="Choose investor term"
+                >
+                  <button
+                    type="button"
+                    data-investor-period-choice="Monthly"
+                    aria-pressed="true"
+                  >
+                    Monthly
+                  </button>
+                  <button
+                    type="button"
+                    data-investor-period-choice="Yearly"
+                    aria-pressed="false"
+                  >
+                    Yearly
+                  </button>
+                </div>
+                <article
+                  class="dashboard-card service-plan-card investor-tier-card"
+                  data-plan="Investors"
+                  data-plan-period="Monthly"
+                  data-investor-tier="Gold"
+                  data-investor-plan-card
+                >
+                  <div class="offer-heading">
+                    <div>
+                      <p class="eyebrow">INVESTORS</p>
+                      <h2>Gold</h2>
+                      <p class="offer-fit" data-investor-term-label>Monthly plan</p>
+                    </div>
+                    <span class="plan-status-badge" hidden></span>
+                  </div>
+                  <div class="investor-selection-details">
+                    <div>
+                      <span>Investment range</span>
+                      <strong data-investor-range>PKR 10,000 – 49,999</strong>
+                    </div>
+                    <div>
+                      <span>Listed profit share</span>
+                      <strong data-investor-profit-share>60%</strong>
+                    </div>
+                    <div>
+                      <span>Loss share shown</span><strong>100%</strong>
+                    </div>
+                    <div>
+                      <span>Term</span>
+                      <strong data-investor-term-value>Monthly</strong>
+                    </div>
+                  </div>
+                  <p class="service-plan-note">
+                    Confirm applicable fees and conditions with ITC before
+                    proceeding. Profit shares are not guaranteed returns.
+                  </p>
+                  <a
+                    class="tier-cta"
+                    data-investor-plan-link
+                    href="signin.html?serviceType=Investors&plan=Gold&planPeriod=Monthly"
+                  >
+                    Choose Gold <span aria-hidden="true">→</span>
+                  </a>
+                </article>
+
+                <article
+                  class="dashboard-card service-plan-card investor-tier-card featured-tier"
+                  data-plan="Investors"
+                  data-plan-period="Monthly"
+                  data-investor-tier="Platinum"
+                  data-investor-plan-card
+                >
+                  <div class="offer-heading">
+                    <div>
+                      <p class="eyebrow">INVESTORS</p>
+                      <h2>Platinum</h2>
+                      <p class="offer-fit" data-investor-term-label>Monthly plan</p>
+                    </div>
+                    <span class="plan-status-badge" hidden></span>
+                  </div>
+                  <div class="investor-selection-details">
+                    <div>
+                      <span>Investment range</span>
+                      <strong data-investor-range>PKR 50,000 – 249,999</strong>
+                    </div>
+                    <div>
+                      <span>Listed profit share</span>
+                      <strong data-investor-profit-share>70%</strong>
+                    </div>
+                    <div>
+                      <span>Loss share shown</span><strong>100%</strong>
+                    </div>
+                    <div>
+                      <span>Term</span>
+                      <strong data-investor-term-value>Monthly</strong>
+                    </div>
+                  </div>
+                  <p class="service-plan-note">
+                    Confirm applicable fees and conditions with ITC before
+                    proceeding. Profit shares are not guaranteed returns.
+                  </p>
+                  <a
+                    class="tier-cta"
+                    data-investor-plan-link
+                    href="signin.html?serviceType=Investors&plan=Platinum&planPeriod=Monthly"
+                  >
+                    Choose Platinum <span aria-hidden="true">→</span>
+                  </a>
+                </article>
+              </div>
+              <div
+                class="service-plan-panel"
+                data-service-panel="account-maintain"
+                hidden
+              >
+                <article
+                  id="account-maintain"
+                  class="dashboard-card service-plan-card account-maintain-card"
+                  data-plan="Account Maintain"
+                >
+                  <div class="offer-heading">
+                    <div>
+                      <p class="eyebrow">MANAGED ACCOUNT</p>
+                      <h2>Account Maintain</h2>
+                      <p class="offer-fit">
+                        Account and funds management request
+                      </p>
+                    </div>
+                    <span class="plan-status-badge" hidden></span>
+                  </div>
+                  <div class="offer-range">
+                    <span>Request amount</span>
+                    <strong>PKR 1,000 <span>to</span> 1,000,000</strong>
+                  </div>
+                  <p class="account-maintain-terms">
+                    Discuss fees, account authority, risk, and withdrawal terms
+                    with ITC. This request stays pending until ITC confirms the
+                    arrangement.
+                  </p>
+                  <a
+                    class="tier-cta"
+                    href="signin.html?serviceType=Account%20Maintain"
+                  >
+                    Request Account Maintain <span aria-hidden="true">→</span>
+                  </a>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="dashboard-card plan-risk-note"
+            aria-labelledby="risk-title"
+          >
+            <span class="risk-icon" aria-hidden="true">!</span>
+            <div>
+              <p class="eyebrow">PLEASE REVIEW BEFORE PROCEEDING</p>
+              <h2 id="risk-title">Understand the risks and full terms</h2>
+              <p>
+                Investor tiers show listed profit shares and a 100% loss share;
+                these are not guaranteed returns. Account Maintain has separate
+                terms. Confirm fees, account authority, withdrawal conditions,
+                and possible losses with ITC in writing before proceeding.
+              </p>
+            </div>
+            <a
+              class="risk-link"
+              href="https://wa.me/923331233009?text=Hello%2C%20please%20explain%20the%20ITC%20plan%20terms%20and%20risks."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ask ITC <span aria-hidden="true">↗</span>
+            </a>
+          </section>
+
+          <section class="plan-bottom-cta">
+            <div>
+              <p class="eyebrow">READY TO GET STARTED?</p>
+              <h2>Create your client account</h2>
+              <p>
+                Save your details and request either service. Requests remain
+                pending until ITC confirms the terms.
+              </p>
+            </div>
+            <a class="plan-details-button" href="signin.html">
+              Make an account <span aria-hidden="true">→</span>
+            </a>
+          </section>
+
+          <footer class="dashboard-footer">
+            <span>Imam Trading Company · Client plans</span>
+            <a href="index.html">Back to ITC home</a>
+          </footer>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="service-plan-selector.js?v=2"></script>
+    <script type="module" src="plan.js?v=6"></script>
+  </body>
+</html>

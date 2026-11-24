@@ -1,0 +1,67 @@
+.login-layout {
+  padding-top: 30px;
+}
+.login-layout > .brand {
+  margin-bottom: 22px;
+}
+.login-card {
+  padding-top: 30px;
+  padding-bottom: 26px;
+}
+.card-heading {
+  margin-bottom: 20px;
+}
+.card-heading h1 {
+  font-size: 23px;
+}
+#signup-form > label {
+  margin-top: 13px;
+}
+#signup-form > input,
+#signup-form .password-field input,
+#signup-form > select,
+#signup-form .service-fields select,
+#signup-form .service-fields input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid rgba(155, 180, 210, 0.24);
+  border-radius: 6px;
+  outline: none;
+  background: #080f1a;
+  padding: 0 12px;
+  color: #e3ebf4;
+  font:
+    500 12px "DM Sans",
+    sans-serif;
+}
+#signup-form > select:invalid,
+#signup-form .service-fields select:invalid {
+  color: #718096;
+}
+#signup-form > input:focus,
+#signup-form .password-field input:focus,
+#signup-form > select:focus,
+#signup-form .service-fields input:focus,
+#signup-form .service-fields select:focus {
+  border-color: #3c91ed;
+  box-shadow: 0 0 0 3px rgba(50, 136, 232, 0.13);
+}
+#signup-form .service-fields > label {
+  display: block;
+  margin-top: 13px;
+}
+#signup-form .service-fields .service-note {
+  margin: 10px 0 4px;
+  color: #8495aa;
+  font-size: 10px;
+  line-height: 1.55;
+}
+#signup-form .service-fields[hidden] {
+  display: none;
+}
+#signup-form > .provider-note {
+  margin: 16px 0;
+}
+#signup-form > .submit-button {
+  font-size: 11px;
+}
